@@ -1,0 +1,29 @@
+<html>
+  <head>
+  </head>
+  <body>
+  <h1>My tasks</h1>
+  <ul>
+    <%@tasks.each do |task|%>
+      <%if task.completed == true%>
+         <li > <i class="fa-regular fa-square-check"></i>  <%=link_to task.title, task_path(task.id)%> <%= link_to task_path(task.id),
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+                <i class="fas fa-trash-restore-alt"></i>
+              <%end%>
+        </li>
+      <%else%>
+        <li > <i class="fa-regular fa-square"></i>  <%=link_to task.title, task_path(task.id)%> <%= link_to task_path(task.id),
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %>
+                <i class="fas fa-trash-restore-alt"></i>
+              <%end%>
+        </li>
+      <%end%>
+    <%end%>
+  </ul>
+    <%=link_to "tasks/new" do %>
+        <i class="fas fa-plus"></i>Add a new task
+    <%end%>
+  </body>
+</html>

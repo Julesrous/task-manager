@@ -1,0 +1,18 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+a {
+  text-decoration: none; 
+  color: #377AB5;
+}
+
+a:hover {
+  text-decoration: underline; 
+  color: #21537f
+}
+
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
